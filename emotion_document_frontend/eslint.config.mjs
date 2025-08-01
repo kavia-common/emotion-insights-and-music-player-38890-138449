@@ -19,6 +19,7 @@ export default [
       ".vscode/",
       ".idea/",
       "*.config.mjs",
+      "karma.conf.js"
     ]
   },
   {

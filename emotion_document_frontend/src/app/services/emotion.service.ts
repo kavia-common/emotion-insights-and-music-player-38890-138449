@@ -13,10 +13,8 @@ import { catchError, map } from 'rxjs/operators';
 export class EmotionService {
   private apiBase = '/api'; // Replace with backend URL if on a different origin
 
-  constructor(public http: HttpClient) {
-    // Reference http to avoid unused warning
-    void this.http;
-  }
+  // eslint-disable-next-line no-unused-vars
+  constructor(public http: HttpClient) {}
 
   // PUBLIC_INTERFACE
   /**

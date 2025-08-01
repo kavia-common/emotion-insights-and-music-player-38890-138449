@@ -19,10 +19,8 @@ export class DocumentUploaderComponent {
 
   allowedTypes = ['application/pdf', 'text/plain'];
 
-  constructor(public emotionService: EmotionService) {
-    // Reference to satisfy linter (field is used in onUpload but also reference here)
-    void this.emotionService;
-  }
+  // eslint-disable-next-line no-unused-vars
+  constructor(public emotionService: EmotionService) {}
 
   // PUBLIC_INTERFACE
   onFileSelected(event: Event) {
