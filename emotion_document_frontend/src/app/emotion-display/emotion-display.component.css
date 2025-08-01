@@ -1,0 +1,53 @@
+.emotion-section {
+  margin: 1.2rem auto 0.8rem auto;
+  max-width: 420px;
+  background: #fffde8;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 7px 0 rgba(251,192,45,0.13);
+}
+
+.emotion-title {
+  color: #fbc02d;
+  font-size: 1.19rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+.emotion-cards {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+}
+
+.emotion-card {
+  background: #e3edfc;
+  border-radius: 0.9rem;
+  padding: 0.9rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1565c0;
+  box-shadow: 0 1px 4px 0 rgba(30,136,229,0.11);
+  min-width: 80px;
+}
+
+.emo-rank {
+  font-size: 0.9rem;
+  color: #1e88e5;
+  margin-bottom: .28rem;
+  letter-spacing: 0.01em;
+}
+.emo-label {
+  font-size: 1.09rem;
+  font-weight: 600;
+  margin-bottom: .09rem;
+}
+.emo-score {
+  font-size: .96rem;
+  color: #2886db;
+  margin-top: .25rem;
+}

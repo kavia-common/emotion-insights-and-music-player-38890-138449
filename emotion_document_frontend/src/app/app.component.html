@@ -1,3 +1,10 @@
-<div class="container">
-  <h1>{{ title }}</h1>
+<div class="main-centered">
+  <h1 class="app-title">Emotion Insights & Music Player</h1>
+  <app-document-uploader
+    (uploadComplete)="onUploadComplete($event)"
+    (previewFile)="onPreviewFile($event)">
+  </app-document-uploader>
+  <app-document-preview [file]="selectedFile"></app-document-preview>
+  <app-emotion-display [emotions]="topEmotions"></app-emotion-display>
+  <app-music-player [musicUrl]="musicUrl" [emotionLabel]="dominantEmotion"></app-music-player>
 </div>

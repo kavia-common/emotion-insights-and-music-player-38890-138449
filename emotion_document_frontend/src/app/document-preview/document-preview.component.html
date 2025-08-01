@@ -1,0 +1,5 @@
+<div *ngIf="file" class="preview-panel">
+  <div class="preview-label">Document Preview:</div>
+  <div class="preview-content" *ngIf="!isPdf && docText">{{ docText }}</div>
+  <div class="preview-pdf" *ngIf="isPdf">{{ docText }}</div>
+</div>

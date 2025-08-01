@@ -1,0 +1,12 @@
+<div class="uploader-panel">
+  <label class="upload-label">
+    <input type="file" accept=".txt,application/pdf" (change)="onFileSelected($event)" [disabled]="isUploading"/>
+    <span>{{selectedFile?.name || 'Choose a .txt or PDF document'}}</span>
+  </label>
+  <button class="upload-btn" (click)="onUpload()" [disabled]="!selectedFile || isUploading">Upload</button>
+  <div *ngIf="progress !== null" class="progress-bar">
+    <div class="progress-inner" [style.width.%]="progress"></div>
+    <span>{{progress}}%</span>
+  </div>
+  <div class="error-msg" *ngIf="errorMsg">{{ errorMsg }}</div>
+</div>

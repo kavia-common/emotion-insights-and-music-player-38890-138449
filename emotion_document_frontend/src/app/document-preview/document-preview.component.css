@@ -1,0 +1,28 @@
+.preview-panel {
+  margin: 1rem auto;
+  background: #f6f7fb;
+  padding: 1rem 1.3rem 1.2rem 1.3rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 2px 9px 0 rgba(30,136,229,0.11);
+  font-family: inherit;
+}
+.preview-label {
+  color: #1976d2;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.preview-content {
+  font-size: 1rem;
+  color: #323b4b;
+  word-break: break-word;
+  margin-top: .2rem;
+}
+
+.preview-pdf {
+  font-size: 0.99rem;
+  color: #1565c0;
+  margin-top: .2rem;
+}

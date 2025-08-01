@@ -2,10 +2,25 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'emotion_document_frontend is being generated';
+  selectedFile: File | null = null;
+  topEmotions: { emotion: string, score: number }[] = [];
+  musicUrl: string | null = null;
+  dominantEmotion: string | null = null;
+
+  onPreviewFile(file: File) {
+    this.selectedFile = file;
+    this.topEmotions = [];
+    this.musicUrl = null;
+    this.dominantEmotion = null;
+  }
+
+  onUploadComplete(result: any) {
+    this.topEmotions = result?.emotions?.slice(0, 3) || [];
+    this.musicUrl = result?.music_url ?? null;
+    this.dominantEmotion = this.topEmotions?.[0]?.emotion || null;
+  }
 }

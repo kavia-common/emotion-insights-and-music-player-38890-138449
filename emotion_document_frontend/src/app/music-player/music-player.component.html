@@ -1,0 +1,4 @@
+<div *ngIf="musicUrl" class="player-panel">
+  <div class="music-label">{{ emotionLabel ? 'Music for: ' + emotionLabel : 'Emotion-Based Music' }}</div>
+  <audio [src]="musicUrl" controls></audio>
+</div>
