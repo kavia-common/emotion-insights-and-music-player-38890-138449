@@ -1,4 +1,4 @@
-<div *ngIf="emotions?.length > 0" class="emotion-section">
+<div *ngIf="!!emotions && emotions.length > 0" class="emotion-section">
   <div class="emotion-title">Top 3 Detected Emotions</div>
   <div class="emotion-cards">
     <div class="emotion-card" *ngFor="let em of emotions; let i=index">

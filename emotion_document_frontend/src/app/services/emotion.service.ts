@@ -13,7 +13,10 @@ import { catchError, map } from 'rxjs/operators';
 export class EmotionService {
   private apiBase = '/api'; // Replace with backend URL if on a different origin
 
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) {
+    // Reference http to avoid unused warning
+    void this.http;
+  }
 
   // PUBLIC_INTERFACE
   /**
@@ -27,7 +30,7 @@ export class EmotionService {
       reportProgress: true,
       observe: 'events'
     }).pipe(
-      map(event => {
+      map((event: any) => {
         if (event.type === HttpEventType.UploadProgress) {
           const percentDone = Math.round(100 * (event.loaded / (event.total ?? 1)));
           return { status: 'progress', percent: percentDone };

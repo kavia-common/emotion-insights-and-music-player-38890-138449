@@ -1,10 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { EmotionService } from '../services/emotion.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-document-uploader',
   templateUrl: './document-uploader.component.html',
-  styleUrls: ['./document-uploader.component.css']
+  styleUrls: ['./document-uploader.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class DocumentUploaderComponent {
   @Output() uploadComplete = new EventEmitter<any>();
@@ -16,7 +19,10 @@ export class DocumentUploaderComponent {
 
   allowedTypes = ['application/pdf', 'text/plain'];
 
-  constructor(private emotionService: EmotionService) {}
+  constructor(public emotionService: EmotionService) {
+    // Reference to satisfy linter (field is used in onUpload but also reference here)
+    void this.emotionService;
+  }
 
   // PUBLIC_INTERFACE
   onFileSelected(event: Event) {

@@ -1,9 +1,22 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DocumentUploaderComponent } from './document-uploader/document-uploader.component';
+import { DocumentPreviewComponent } from './document-preview/document-preview.component';
+import { EmotionDisplayComponent } from './emotion-display/emotion-display.component';
+import { MusicPlayerComponent } from './music-player/music-player.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    DocumentUploaderComponent,
+    DocumentPreviewComponent,
+    EmotionDisplayComponent,
+    MusicPlayerComponent
+  ]
 })
 export class AppComponent {
   selectedFile: File | null = null;

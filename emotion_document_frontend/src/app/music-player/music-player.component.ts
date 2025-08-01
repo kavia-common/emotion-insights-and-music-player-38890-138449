@@ -1,9 +1,12 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-music-player',
   templateUrl: './music-player.component.html',
-  styleUrls: ['./music-player.component.css']
+  styleUrls: ['./music-player.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class MusicPlayerComponent implements OnChanges {
   @Input() musicUrl: string | null = null;

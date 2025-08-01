@@ -8,17 +8,17 @@ import { DocumentPreviewComponent } from './document-preview/document-preview.co
 import { EmotionDisplayComponent } from './emotion-display/emotion-display.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 
+// When components use standalone: true, don't declare them, but IMPORT them in imports
 @NgModule({
-  declarations: [
+  declarations: [],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
     AppComponent,
     DocumentUploaderComponent,
     DocumentPreviewComponent,
     EmotionDisplayComponent,
     MusicPlayerComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,12 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-document-preview',
   templateUrl: './document-preview.component.html',
-  styleUrls: ['./document-preview.component.css']
+  styleUrls: ['./document-preview.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class DocumentPreviewComponent implements OnChanges {
   @Input() file: File | null = null;
